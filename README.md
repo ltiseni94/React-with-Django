@@ -2,6 +2,51 @@
 
 ### Credits to [Brad Traversy](https://github.com/bradtraversy "brad traversy github page") for inspiring this work with his video series: [Full Stack React & Django](https://www.youtube.com/watch?v=GieYIzvdt2U&t=1425s)
 
+# Short guide - clone the repo and install the needed stuff.
+
+This is a step-by-step guide on how to clone this repo and start using the React powered frontend app into your django project!
+
+First, clone the repo:
+
+    $ git clone https://github.com/ltiseni94/React-with-Django.git <anywhere-you-like>
+
+Then, create a virtual environment:
+
+    $ python3 -m venv venv
+
+Activate it:
+
+    $ source venv/bin/activate
+
+And install the requirements:
+
+    (venv) $ pip install -r requirements.txt
+
+Now setup the npm packages:
+
+    $ npm install
+
+Finally, create the Django secret key:
+
+    $ echo "SECRET_KEY = '<your-secret-key>'" > ./reactdjangosetup/secrets.py
+
+Run the migration if you want:
+
+    (venv) $ python manage.py migrate
+
+Now you should configure Live Sass Compiler. Have a look to section 3.3 of the __Long Guide__.
+
+When Live Sass Compiler is configured, you can compile the sass code.
+
+Don't forget to compile the react code, too:
+
+    $ npm run dev
+
+Finally, you should be able to see your hello world website!
+
+    (venv) $ python manage.py runserver
+
+# Long guide - how to generate this repo from scratch.
 
 This is a step-by-step guide on how to integrate React.js-based frontend into one of your Django applications.
 
