@@ -60,13 +60,12 @@ By following this guide, you will be able to:
 
 Prerequisites:
 
-- you should be using a debian-based Linux (tested on Ubuntu 20.04 LTS)
+- This guide has been tested in a bash console in Ubuntu 20.04. It should work fine also for other Linux distributions. You probably can install anything in Windows, too, but you'll have to use the corresponding cmd / powershell commands that are not reported here.
 
-- you should have already installed:
+- You should have already installed:
     - python 3.6+
     - npm
-
-- The suggested IDE is Visual Studio Code
+    - Visual Studio Code with the Live Sass Compiler extension (alternatively, you can use a sass compiler and compile scss files from bash).
 
 Let's Start!
 
