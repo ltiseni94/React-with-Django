@@ -169,7 +169,7 @@ Open a terminal, activate the virtual environment and navigate into the folder t
         (venv) $ mkdir -p ./frontend/src/components
         (venv) $ mkdir -p ./frontend/{static,templates}
 
-### 2.2 - Configure React!
+### 2.2 - Configure and Start the React App!
 
 We will use npm, webpack and babel to configure React.
 
@@ -219,7 +219,7 @@ We will use npm, webpack and babel to configure React.
             }
         }
 
--   Now, let's create our javascript files:
+-   Now, let's create the needed JavaScript files for a minimal React Application:
 
         $ touch ./frontend/src/index.js
         $ touch ./frontend/src/App.js
@@ -260,7 +260,7 @@ We will use npm, webpack and babel to configure React.
 
     This will allow you to compile react app by using:
 
-    Development:
+    Development (compiler remains active and automatically detect changes):
         
         $ npm run dev
     
@@ -268,9 +268,7 @@ We will use npm, webpack and babel to configure React.
         
         $ npm run build
 
-    In development mode, any change to your react source code will be compiled immediately.
-
-    You should see that your js code has been compiled inside the static folder of the frontend app in the __main.js__ file.
+    You should see that your React code has been compiled into the __main.js__ file inside the _static_ folder of the frontend app.
 
 ## 2.3 - Include the react App into your template!
 
@@ -485,7 +483,7 @@ Notice that:
         
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
 
-    This tutorial may get old, so check [here](https://getbootstrap.com/docs/5.0/getting-started/download/) for the last versions of these two scripts.
+    This tutorial may get old, so check [here](https://getbootstrap.com/docs/5.0/getting-started/download/) for the latest versions of these two scripts.
 
 Now run the Django server and you should see that the font is different and that the "Hello World!" is inside a container, so it is closer to the center.
 
@@ -501,6 +499,10 @@ On top of that, add these lines:
 
     node_modules/
     .vscode/
+    frontend/static/
+    **/secrets.py
+    
+Finally, create the secrets.py file in the same directory with the settings.py file. Move your SECRET_KEY inside the secrets.py to avoid that the SECRET_KEY is committed and pushed online. To generate secure SECRET_KEYs, have a look [here](https://djecrety.ir/)
 
 -   _Optional step: run this command into a terminal session to create a requirements.txt file that can be useful to restore your venv when cloning this repo!_
 
