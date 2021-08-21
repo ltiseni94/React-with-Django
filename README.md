@@ -30,7 +30,9 @@ Finally, create the Django secret key:
 
     $ echo "SECRET_KEY = '<your-secret-key>'" > ./reactdjangosetup/secrets.py
 
-Run the migration if you want:
+Have a look at [this](https://djecrety.ir/ "django secret key generator") if you don't know how to generate a key.
+
+Run the migration:
 
     (venv) $ python manage.py migrate
 
